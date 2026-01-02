@@ -79,7 +79,7 @@ jobs:
     needs: [build]
     env:
       REGISTRY: ghcr.io
-      IMAGE_NAME: pravinbangar21/devops
+      IMAGE_NAME: ${{ github.repository }}
     outputs:
       image_tag: ${{ steps.set_output.outputs.image_tag }}
     steps:
